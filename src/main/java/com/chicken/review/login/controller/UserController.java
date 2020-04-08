@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.chicken.review.login.service.ReviewService;
+
 
 
 
@@ -26,9 +28,12 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @Controller
 public class UserController {
 	
-	private final Logger logger = LoggerFactory.getLogger(UserController.class);
+	//private final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
-   
+	
+	@Autowired
+    private ReviewService reviewService;
+	
 
     @RequestMapping(value="/login")
     public String login(Model model, String error, String logout) {
@@ -40,6 +45,9 @@ public class UserController {
     	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
     	
     	
+    	model.addAttribute("reviewList", reviewService.getReviewList());
+    	
+    	System.out.println(reviewService.getReviewList());
     	if(authentication != null) {
     		
 	    	if(!authentication.getPrincipal().equals("anonymousUser"))
