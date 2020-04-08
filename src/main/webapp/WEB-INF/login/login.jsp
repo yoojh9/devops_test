@@ -134,14 +134,14 @@ $(document).ready(function(){
 
 <div class="itemListWrapper">
 <div class="itemList slide-child">
-   <div class="imageArea"><img src="img/img1.jpg"/></div>
+   <div class="imageArea"><img src="${ reviewList[0].s3ImageUrl}"/></div>
    <div class="reviewArea">
    	  <div class="reviewTitle" ><c:out value="${ reviewList[0].title }" /> </div>
       <textarea readonly><c:out value="${ reviewList[0].content }" /></textarea>
    </div>
 </div>
 <div class="itemList slide-child">
-   <div class="imageArea"><img src="img/img2.jpg"/></div>
+   <div class="imageArea"><img src="${ reviewList[1].s3ImageUrl}"/></div>
    <div class="reviewArea">
   	  <div class="reviewTitle" ><c:out value="${ reviewList[1].title }" /> </div>
       <textarea readonly><c:out value="${ reviewList[1].content }" /></textarea>
@@ -149,7 +149,7 @@ $(document).ready(function(){
    </div>
 </div>
 <div class="itemList slide-child">
-   <div class="imageArea"><img src="img/img3.jpg"/></div>
+   <div class="imageArea"><img src="${ reviewList[2].s3ImageUrl}"/></div>
    <div class="reviewArea" >
   	  <div class="reviewTitle" ><c:out value="${ reviewList[2].title }" /> </div>
       <textarea readonly><c:out value="${ reviewList[2].content }" /></textarea>
