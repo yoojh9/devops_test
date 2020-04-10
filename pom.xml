@@ -138,7 +138,7 @@
 
 	<build>
 		<!-- ROOT.war 가 생성된다. -->
-        <finalName>ROOT</finalName>
+        <finalName>review</finalName>
 	
 		<plugins>
 			<plugin>
