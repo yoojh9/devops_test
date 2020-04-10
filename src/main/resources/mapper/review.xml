@@ -5,7 +5,12 @@
 	
 
 	<select id="getReviewList"  parameterType="String"  resultType="com.chicken.review.login.vo.ReviewVO">
-		select * from review
+		
+		select 
+			*
+		from
+			review
+			
 	</select>
 	
 	
